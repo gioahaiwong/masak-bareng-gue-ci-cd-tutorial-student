@@ -82,6 +82,12 @@ uvicorn app.main:app --reload
 
 Buka browser ke **http://localhost:8000** — kamu akan lihat halaman Masak Apa Nih?.
 
+> **Muncul error "Address already in use"?** Berarti port 8000 sedang dipakai proses lain. Kill dulu lalu jalankan ulang:
+> ```bash
+> lsof -ti:8000 | xargs kill -9
+> uvicorn app.main:app --reload
+> ```
+
 Coba:
 - Ketik "ayam" di search bar
 - Klik salah satu resep
