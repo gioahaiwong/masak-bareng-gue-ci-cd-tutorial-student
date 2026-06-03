@@ -3,6 +3,8 @@ Test suite untuk Masak Bareng Gue API.
 
 Jalankan: pytest tests/ -v
 """
+import pytest
+# pyrefly: ignore [missing-import]
 from fastapi.testclient import TestClient
 
 from app.main import app
